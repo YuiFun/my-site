@@ -1,15 +1,15 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
 
-// 定义响应式数据类型（简单起见使用 any，进阶可以使用 interface）
+
 const ipData = ref<any>(null);
 const loading = ref(true);
 
-// 获取 IP 数据的异步函数
+
 const fetchIPData = async () => {
   loading.value = true;
   try {
-    // 使用 ipapi.co 接口获取详细地理信息
+    
     const response = await fetch('https://ipapi.co/json/');
     if (!response.ok) throw new Error('网络请求失败');
     ipData.value = await response.json();
@@ -100,7 +100,6 @@ onMounted(() => {
 </template>
 
 <style scoped>
-/* 容器居中布局 */
 .container {
   min-height: 100vh;
   display: flex;
