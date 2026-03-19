@@ -15,7 +15,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <p id="userIP">{{ "Welcome"+ipAddress }}</p>
+  <p id="userIP">{{ "Welcome："+ipAddress }}</p>
 </template>
 
 <style scoped></style>
